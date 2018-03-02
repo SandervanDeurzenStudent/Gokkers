@@ -56,12 +56,15 @@
             this.BTN_reset = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.racebutton = new System.Windows.Forms.Button();
+            this.pictureBox6 = new System.Windows.Forms.PictureBox();
+            this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             this.SuspendLayout();
             // 
             // pictureBox1
@@ -70,8 +73,8 @@
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox1.Location = new System.Drawing.Point(2, 12);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(862, 233);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.Size = new System.Drawing.Size(878, 266);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.pictureBox1.TabIndex = 0;
             this.pictureBox1.TabStop = false;
             // 
@@ -80,7 +83,7 @@
             this.pictureBox2.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(2, 84);
+            this.pictureBox2.Location = new System.Drawing.Point(2, 82);
             this.pictureBox2.Name = "pictureBox2";
             this.pictureBox2.Size = new System.Drawing.Size(64, 28);
             this.pictureBox2.TabIndex = 2;
@@ -91,7 +94,7 @@
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ControlLightLight;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(2, 138);
+            this.pictureBox3.Location = new System.Drawing.Point(2, 195);
             this.pictureBox3.Name = "pictureBox3";
             this.pictureBox3.Size = new System.Drawing.Size(64, 28);
             this.pictureBox3.TabIndex = 3;
@@ -103,7 +106,7 @@
             this.pictureBox4.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("pictureBox4.BackgroundImage")));
             this.pictureBox4.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
             this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(2, 202);
+            this.pictureBox4.Location = new System.Drawing.Point(2, 247);
             this.pictureBox4.Name = "pictureBox4";
             this.pictureBox4.Size = new System.Drawing.Size(64, 31);
             this.pictureBox4.TabIndex = 4;
@@ -126,7 +129,7 @@
             // RBTN_Fer
             // 
             this.RBTN_Fer.AutoSize = true;
-            this.RBTN_Fer.Location = new System.Drawing.Point(33, 302);
+            this.RBTN_Fer.Location = new System.Drawing.Point(33, 329);
             this.RBTN_Fer.Name = "RBTN_Fer";
             this.RBTN_Fer.Size = new System.Drawing.Size(17, 16);
             this.RBTN_Fer.TabIndex = 6;
@@ -137,7 +140,7 @@
             // RBTN_Sietse
             // 
             this.RBTN_Sietse.AutoSize = true;
-            this.RBTN_Sietse.Location = new System.Drawing.Point(33, 326);
+            this.RBTN_Sietse.Location = new System.Drawing.Point(33, 351);
             this.RBTN_Sietse.Name = "RBTN_Sietse";
             this.RBTN_Sietse.Size = new System.Drawing.Size(17, 16);
             this.RBTN_Sietse.TabIndex = 7;
@@ -148,7 +151,7 @@
             // RBTN_Lidy
             // 
             this.RBTN_Lidy.AutoSize = true;
-            this.RBTN_Lidy.Location = new System.Drawing.Point(33, 349);
+            this.RBTN_Lidy.Location = new System.Drawing.Point(33, 373);
             this.RBTN_Lidy.Name = "RBTN_Lidy";
             this.RBTN_Lidy.Size = new System.Drawing.Size(17, 16);
             this.RBTN_Lidy.TabIndex = 8;
@@ -160,7 +163,7 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(29, 248);
+            this.label1.Location = new System.Drawing.Point(28, 281);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(142, 25);
             this.label1.TabIndex = 9;
@@ -170,7 +173,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(33, 272);
+            this.label2.Location = new System.Drawing.Point(29, 306);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(148, 20);
             this.label2.TabIndex = 10;
@@ -180,7 +183,7 @@
             // 
             this.label3.AutoSize = true;
             this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(266, 272);
+            this.label3.Location = new System.Drawing.Point(266, 305);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(48, 20);
             this.label3.TabIndex = 11;
@@ -200,7 +203,7 @@
             // 
             this.label10.AutoSize = true;
             this.label10.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label10.Location = new System.Drawing.Point(886, 84);
+            this.label10.Location = new System.Drawing.Point(886, 86);
             this.label10.Name = "label10";
             this.label10.Size = new System.Drawing.Size(89, 24);
             this.label10.TabIndex = 18;
@@ -210,7 +213,7 @@
             // 
             this.label11.AutoSize = true;
             this.label11.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label11.Location = new System.Drawing.Point(886, 138);
+            this.label11.Location = new System.Drawing.Point(886, 199);
             this.label11.Name = "label11";
             this.label11.Size = new System.Drawing.Size(41, 24);
             this.label11.TabIndex = 19;
@@ -221,7 +224,7 @@
             // 
             this.label12.AutoSize = true;
             this.label12.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label12.Location = new System.Drawing.Point(886, 202);
+            this.label12.Location = new System.Drawing.Point(886, 247);
             this.label12.Name = "label12";
             this.label12.Size = new System.Drawing.Size(57, 24);
             this.label12.TabIndex = 20;
@@ -232,7 +235,7 @@
             // 
             this.lblFerbet.AutoSize = true;
             this.lblFerbet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblFerbet.Location = new System.Drawing.Point(268, 301);
+            this.lblFerbet.Location = new System.Drawing.Point(266, 325);
             this.lblFerbet.Name = "lblFerbet";
             this.lblFerbet.Size = new System.Drawing.Size(180, 20);
             this.lblFerbet.TabIndex = 11;
@@ -243,7 +246,7 @@
             // 
             this.lblSietsebet.AutoSize = true;
             this.lblSietsebet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblSietsebet.Location = new System.Drawing.Point(267, 325);
+            this.lblSietsebet.Location = new System.Drawing.Point(266, 351);
             this.lblSietsebet.Name = "lblSietsebet";
             this.lblSietsebet.Size = new System.Drawing.Size(202, 20);
             this.lblSietsebet.TabIndex = 22;
@@ -253,7 +256,7 @@
             // 
             this.lblLidybet.AutoSize = true;
             this.lblLidybet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblLidybet.Location = new System.Drawing.Point(267, 348);
+            this.lblLidybet.Location = new System.Drawing.Point(266, 373);
             this.lblLidybet.Name = "lblLidybet";
             this.lblLidybet.Size = new System.Drawing.Size(186, 20);
             this.lblLidybet.TabIndex = 23;
@@ -263,17 +266,17 @@
             // 
             this.lblBetter.AutoSize = true;
             this.lblBetter.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblBetter.Location = new System.Drawing.Point(28, 394);
+            this.lblBetter.Location = new System.Drawing.Point(28, 420);
             this.lblBetter.Name = "lblBetter";
-            this.lblBetter.Size = new System.Drawing.Size(114, 25);
+            this.lblBetter.Size = new System.Drawing.Size(65, 25);
             this.lblBetter.TabIndex = 24;
-            this.lblBetter.Text = "playername";
+            this.lblBetter.Text = "player";
             this.lblBetter.Click += new System.EventHandler(this.lblBetter_Click);
             // 
             // btnBet
             // 
             this.btnBet.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBet.Location = new System.Drawing.Point(107, 391);
+            this.btnBet.Location = new System.Drawing.Point(107, 420);
             this.btnBet.Name = "btnBet";
             this.btnBet.Size = new System.Drawing.Size(75, 28);
             this.btnBet.TabIndex = 25;
@@ -283,7 +286,7 @@
             // 
             // numericUpDown2
             // 
-            this.numericUpDown2.Location = new System.Drawing.Point(197, 392);
+            this.numericUpDown2.Location = new System.Drawing.Point(197, 420);
             this.numericUpDown2.Name = "numericUpDown2";
             this.numericUpDown2.Size = new System.Drawing.Size(120, 22);
             this.numericUpDown2.TabIndex = 26;
@@ -298,7 +301,7 @@
             // 
             this.label5.AutoSize = true;
             this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.2F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(323, 394);
+            this.label5.Location = new System.Drawing.Point(323, 420);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(74, 20);
             this.label5.TabIndex = 27;
@@ -310,9 +313,10 @@
             this.comboBox1.Items.AddRange(new object[] {
             "Mythosis",
             "The Light",
+            "Steel Wing",
             "Bolt",
             "Sanic"});
-            this.comboBox1.Location = new System.Drawing.Point(400, 390);
+            this.comboBox1.Location = new System.Drawing.Point(400, 420);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(121, 24);
             this.comboBox1.TabIndex = 28;
@@ -322,7 +326,7 @@
             // BTN_reset
             // 
             this.BTN_reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_reset.Location = new System.Drawing.Point(702, 374);
+            this.BTN_reset.Location = new System.Drawing.Point(695, 404);
             this.BTN_reset.Name = "BTN_reset";
             this.BTN_reset.Size = new System.Drawing.Size(97, 48);
             this.BTN_reset.TabIndex = 30;
@@ -332,13 +336,13 @@
             // 
             // timer1
             // 
-            this.timer1.Interval = 40;
+            this.timer1.Interval = 80;
             this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // racebutton
             // 
             this.racebutton.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.racebutton.Location = new System.Drawing.Point(566, 374);
+            this.racebutton.Location = new System.Drawing.Point(568, 404);
             this.racebutton.Name = "racebutton";
             this.racebutton.Size = new System.Drawing.Size(97, 48);
             this.racebutton.TabIndex = 31;
@@ -346,11 +350,32 @@
             this.racebutton.UseVisualStyleBackColor = true;
             this.racebutton.Click += new System.EventHandler(this.racebutton_Click);
             // 
+            // pictureBox6
+            // 
+            this.pictureBox6.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox6.Image")));
+            this.pictureBox6.Location = new System.Drawing.Point(2, 137);
+            this.pictureBox6.Name = "pictureBox6";
+            this.pictureBox6.Size = new System.Drawing.Size(64, 28);
+            this.pictureBox6.TabIndex = 32;
+            this.pictureBox6.TabStop = false;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 10.8F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(886, 141);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(97, 24);
+            this.label4.TabIndex = 33;
+            this.label4.Text = "Steel wing";
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1023, 458);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.racebutton);
             this.Controls.Add(this.BTN_reset);
             this.Controls.Add(this.comboBox1);
@@ -384,6 +409,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.numericUpDown2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -417,6 +443,8 @@
         private System.Windows.Forms.Button BTN_reset;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button racebutton;
+        private System.Windows.Forms.PictureBox pictureBox6;
+        private System.Windows.Forms.Label label4;
     }
 }
 

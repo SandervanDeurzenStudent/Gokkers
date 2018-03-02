@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.Threading;
+using System.Media;
 
 namespace Gokkers
 {
@@ -19,12 +20,13 @@ namespace Gokkers
         Guy[] guyArray = new Guy[3];
         Random Randomizer = new Random();
         Ostridge ostridge = new Ostridge();
-        Ostridge[] ostridgeArray = new Ostridge[4];
+        Ostridge[] ostridgeArray = new Ostridge[5];
         Random randomizer = new Random();
         int FerBet = 0;
         int SietseBet = 0;
         int LidyBet = 0;
         bool Bet = false;
+        int RaceEndCounter = 0;
 
         private void MakeOstridge()
         {
@@ -57,6 +59,13 @@ namespace Gokkers
                 MyPictureBox = pictureBox4,
                 Name = "Sanic",
                 StartingPosition = pictureBox3.Left,
+                Randomizer = randomizer
+            };
+            ostridgeArray[4] = new Ostridge()
+            {
+                MyPictureBox = pictureBox6,
+                Name = "Steel Wing",
+                StartingPosition = pictureBox6.Left,
                 Randomizer = randomizer
             };
         }
@@ -96,7 +105,8 @@ namespace Gokkers
         //private PictureBox pictureBox2;
         // private PictureBox pictureBox3;
         //private PictureBox pictureBox4;
-
+        private SoundPlayer _congosound;
+        private SoundPlayer _soundPlayer;
         public Form1()
         {
             InitializeComponent();
@@ -105,7 +115,8 @@ namespace Gokkers
             guyArray[0].UpdateLabels();
             guyArray[1].UpdateLabels();
             guyArray[2].UpdateLabels();
-
+            _congosound = new SoundPlayer("conga.wav");
+            _soundPlayer = new SoundPlayer("win.wav");
         }
 
         private void pictureBox4_Click(object sender, EventArgs e)
@@ -167,44 +178,64 @@ namespace Gokkers
         public bool Winner = false;
 
         
+        private int EndCounter()
+        {
+            if (pictureBox5.Left == 0)
+            {
+                RaceEndCounter += 1;
+                return RaceEndCounter;
 
-        
+            }
+            else
+            {
+                return 0;
+            }
+        }
 
-       
+
+
 
         private void BTN_reset_Click(object sender, EventArgs e)
         {
+            _soundPlayer.Stop();
+
             pictureBox5.Left = 0;
             pictureBox2.Left = 0;
             pictureBox3.Left = 0;
             pictureBox4.Left = 0;
-            
+            pictureBox6.Left = 0;
+
+            EndCounter();
 
         }
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-
+            timer1.Interval = 60;
             //pictureBox5.Location = new Point(pictureBox5.Location.X + ostridge.Move(), pictureBox5.Location.Y);
             //pictureBox2.Location = new Point(pictureBox2.Location.X + ostridge.Move(), pictureBox2.Location.Y);
             // pictureBox3.Location = new Point(pictureBox3.Location.X + ostridge.Move(), pictureBox3.Location.Y);
             //pictureBox4.Location = new Point(pictureBox4.Location.X + ostridge.Move(), pictureBox4.Location.Y);
             for (int i = 0; i < ostridgeArray.Length; i++)
             {
-
-                 ostridgeArray[i].Run();
+                if (RaceEndCounter == 3)
+                {
+                    pictureBox5.Left = 250;
+                    MessageBox.Show("hij werkt :D");
+                }
+                ostridgeArray[i].Run();
                 if ( ostridgeArray[i].Run() == true)
                 {
                     // dogsArray[i].Run() = true;
                     timer1.Stop();
-                    timer1.Enabled = false;
-                    MessageBox.Show(ostridgeArray[i].Name + " has won the race");
+                    
+                   // timer1.Enabled = false;
+                    _congosound.Stop();
+                    _soundPlayer.Play();
+                    MessageBox.Show(ostridgeArray[i].Name + " has won the race!");
                     winningOstridge = ostridgeArray[i].Name;
                     i = ostridgeArray.Length;
                     racebutton.Enabled = true;
-                    //ostridgeArray[0].Collect(winningDog);
-                    //guyArray[1].Collect(winningDog);
-                    //guyArray[2].Collect(winningDog);
                     guyArray[0].Collect(winningOstridge);
                     guyArray[1].Collect(winningOstridge);
                     guyArray[2].Collect(winningOstridge);
@@ -217,33 +248,41 @@ namespace Gokkers
 
             }
             
-
-            //stopRace();
-
-
         }
+
 
 
 
         public void stopRace()
         {
         }
-      
 
         private void racebutton_Click(object sender, EventArgs e)
         {
 
+            _soundPlayer.Stop();
+            _congosound.Play();
             ostridgeArray[0].TakeStartingPosition();
             ostridgeArray[1].TakeStartingPosition();
             ostridgeArray[2].TakeStartingPosition();
             ostridgeArray[3].TakeStartingPosition();
+            ostridgeArray[4].TakeStartingPosition();
+            pictureBox5.Left = 0;
+            pictureBox2.Left = 0;
+            pictureBox3.Left = 0;
+            pictureBox4.Left = 0;
+            pictureBox6.Left = 0;
+            EndCounter();
+           
             SietseBet = 0;
             LidyBet = 0;
             FerBet = 0;
             racebutton.Enabled = false;
             timer1.Start();
+            
         }
 
+        // betting system
         private void btnBet_Click(object sender, EventArgs e)
         {
             if (RBTN_Fer.Checked == true)

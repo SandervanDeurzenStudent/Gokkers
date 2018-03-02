@@ -29,7 +29,7 @@ namespace Gokkers
 
         public int GetRaceTrackLength()
         {
-            this.RaceTrackLength = 530;
+            this.RaceTrackLength = 550;
             return this.RaceTrackLength;
         }
 
