@@ -21,6 +21,7 @@ namespace Gokkers
         public int Location = 0;
         public Random Randomizer = new Random();
 
+        
         public void TakeStartingPosition()
         {
             Location = 0;
@@ -29,7 +30,7 @@ namespace Gokkers
 
         public int GetRaceTrackLength()
         {
-            this.RaceTrackLength = 550;
+            this.RaceTrackLength = 605;
             return this.RaceTrackLength;
         }
 

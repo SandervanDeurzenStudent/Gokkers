@@ -53,7 +53,6 @@
             this.numericUpDown2 = new System.Windows.Forms.NumericUpDown();
             this.label5 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
-            this.BTN_reset = new System.Windows.Forms.Button();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.racebutton = new System.Windows.Forms.Button();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -323,17 +322,6 @@
             this.comboBox1.Text = "Mythosis";
             this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
             // 
-            // BTN_reset
-            // 
-            this.BTN_reset.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BTN_reset.Location = new System.Drawing.Point(695, 404);
-            this.BTN_reset.Name = "BTN_reset";
-            this.BTN_reset.Size = new System.Drawing.Size(97, 48);
-            this.BTN_reset.TabIndex = 30;
-            this.BTN_reset.Text = "Reset";
-            this.BTN_reset.UseVisualStyleBackColor = true;
-            this.BTN_reset.Click += new System.EventHandler(this.BTN_reset_Click);
-            // 
             // timer1
             // 
             this.timer1.Interval = 80;
@@ -377,7 +365,6 @@
             this.Controls.Add(this.label4);
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.racebutton);
-            this.Controls.Add(this.BTN_reset);
             this.Controls.Add(this.comboBox1);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.numericUpDown2);
@@ -440,7 +427,6 @@
         private System.Windows.Forms.NumericUpDown numericUpDown2;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ComboBox comboBox1;
-        private System.Windows.Forms.Button BTN_reset;
         private System.Windows.Forms.Timer timer1;
         private System.Windows.Forms.Button racebutton;
         private System.Windows.Forms.PictureBox pictureBox6;
