@@ -1,10 +1,20 @@
 C:\Users\Sander van Deurzen\source\repos\Gokkers\Gokkers\bin\Debug\Gokkers.exe.config
 C:\Users\Sander van Deurzen\source\repos\Gokkers\Gokkers\bin\Debug\Gokkers.exe
 C:\Users\Sander van Deurzen\source\repos\Gokkers\Gokkers\bin\Debug\Gokkers.pdb
-C:\Users\Sander van Deurzen\source\repos\Gokkers\Gokkers\obj\Debug\Gokkers.csprojResolveAssemblyReference.cache
 C:\Users\Sander van Deurzen\source\repos\Gokkers\Gokkers\obj\Debug\Gokkers.Form1.resources
 C:\Users\Sander van Deurzen\source\repos\Gokkers\Gokkers\obj\Debug\Gokkers.Properties.Resources.resources
 C:\Users\Sander van Deurzen\source\repos\Gokkers\Gokkers\obj\Debug\Gokkers.csproj.GenerateResource.Cache
 C:\Users\Sander van Deurzen\source\repos\Gokkers\Gokkers\obj\Debug\Gokkers.csproj.CoreCompileInputs.cache
 C:\Users\Sander van Deurzen\source\repos\Gokkers\Gokkers\obj\Debug\Gokkers.exe
 C:\Users\Sander van Deurzen\source\repos\Gokkers\Gokkers\obj\Debug\Gokkers.pdb
+C:\Users\Sander van Deurzen\Documents\school\periode 3\Gokkers\Gokkers\bin\Debug\Gokkers.exe.config
+C:\Users\Sander van Deurzen\Documents\school\periode 3\Gokkers\Gokkers\bin\Debug\Gokkers.exe
+C:\Users\Sander van Deurzen\Documents\school\periode 3\Gokkers\Gokkers\bin\Debug\Gokkers.pdb
+C:\Users\Sander van Deurzen\Documents\school\periode 3\Gokkers\Gokkers\obj\Debug\Gokkers.csprojResolveAssemblyReference.cache
+C:\Users\Sander van Deurzen\Documents\school\periode 3\Gokkers\Gokkers\obj\Debug\Gokkers.Form1.resources
+C:\Users\Sander van Deurzen\Documents\school\periode 3\Gokkers\Gokkers\obj\Debug\Gokkers.Properties.Resources.resources
+C:\Users\Sander van Deurzen\Documents\school\periode 3\Gokkers\Gokkers\obj\Debug\Gokkers.csproj.GenerateResource.Cache
+C:\Users\Sander van Deurzen\Documents\school\periode 3\Gokkers\Gokkers\obj\Debug\Gokkers.csproj.CoreCompileInputs.cache
+C:\Users\Sander van Deurzen\Documents\school\periode 3\Gokkers\Gokkers\obj\Debug\Gokkers.exe
+C:\Users\Sander van Deurzen\Documents\school\periode 3\Gokkers\Gokkers\obj\Debug\Gokkers.pdb
+C:\Users\Sander van Deurzen\source\repos\Gokkers\Gokkers\obj\Debug\Gokkers.csprojAssemblyReference.cache

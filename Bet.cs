@@ -16,7 +16,7 @@ namespace Gokkers
         public decimal PayOut(string Winner)
         {
             if (Winner == Ostridge)
-                return Amount * 1;
+                return Amount * 2;
             else
                 return (0 - Amount);
         }

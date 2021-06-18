@@ -16,6 +16,8 @@ namespace Gokkers
     {
         public decimal Test;
         public string winningOstridge;
+        public string secondOstridge;
+        public string thirdOstridge;
 
         Guy[] guyArray = new Guy[3];
         Random Randomizer = new Random();
@@ -139,7 +141,7 @@ namespace Gokkers
 
         private void label11_Click(object sender, EventArgs e)
         {
-
+            
         }
 
         private void label4_Click(object sender, EventArgs e)
@@ -176,7 +178,6 @@ namespace Gokkers
 
                 lblBetter.Text = "Lidy";
         }
-        public bool Winner = false;
 
         
         private int EndCounter()
@@ -207,46 +208,46 @@ namespace Gokkers
 
         private void timer1_Tick(object sender, EventArgs e)
         {
-            timer1.Interval = 10;
+            timer1.Interval = 50;
             for (int i = 0; i < ostridgeArray.Length; i++)
             {   
                
                 ostridgeArray[i].Run();
-                if (RaceEndCounter == 3 && pictureBox5.Left >= 250)
+                if (RaceEndCounter >= 3 && pictureBox5.Left >= 250)
                 {
-                    //pictureBox5.Left = 250;
-                    //ostridgeArray[0].Location = 250;
-                    pictureBox5.Dispose();
-                }
+                    //pictureBox5.Dispose();
+                    ostridgeArray[0].TakeStartingPosition();
+
+                }     
                 if ( ostridgeArray[i].Run() == true)
                 {
                     timer1.Stop();
                     _congosound.Stop();
                     _soundPlayer.Play();
+                    secondOstridge = ostridgeArray[i].Name;
+                    thirdOstridge = ostridgeArray[i].Name;
                     MessageBox.Show(ostridgeArray[i].Name + " has won the race!");
                     winningOstridge = ostridgeArray[i].Name;
+                    ostridgeArray[i].TakeStartingPosition();
                     i = ostridgeArray.Length;
                     racebutton.Enabled = true;
                     guyArray[0].Collect(winningOstridge);
                     guyArray[1].Collect(winningOstridge);
                     guyArray[2].Collect(winningOstridge);
+                    timer2.Start();
                 }
 
             }
-            
+         
+
         }
 
-
-
-
-        public void stopRace()
-        {
-        }
+      
 
         private void racebutton_Click(object sender, EventArgs e)
         {
 
-            _soundPlayer.Stop();
+            
             _congosound.Play();
             ostridgeArray[0].TakeStartingPosition();
             ostridgeArray[1].TakeStartingPosition();
@@ -324,6 +325,76 @@ namespace Gokkers
         private void numericUpDown2_ValueChanged(object sender, EventArgs e)
         {
 
+        }
+
+        private void timer2_Tick(object sender, EventArgs e)
+        {
+            timer2.Interval = 20;
+            for (int i = 0; i < ostridgeArray.Length; i++)
+            {
+
+                ostridgeArray[i].SecondRun();
+                if (ostridgeArray[i].SecondRun() == true)
+                {
+                    timer2.Stop();
+                    _congosound.Stop();
+                    _soundPlayer.Play();
+                    MessageBox.Show(ostridgeArray[i].Name + " has become second!");
+                    winningOstridge = ostridgeArray[i].Name;
+                    ostridgeArray[i].TakeStartingPosition();
+                    i = ostridgeArray.Length;
+                    timer3.Start();
+                }
+                
+            }
+        }
+
+        private void timer3_Tick(object sender, EventArgs e)
+        {
+            timer3.Interval = 20;
+            for (int i = 0; i < ostridgeArray.Length; i++)
+            {
+
+                ostridgeArray[i].ThirdRun();
+                if (ostridgeArray[i].ThirdRun() == true)
+                {
+                    timer3.Stop();
+                    _congosound.Stop();
+                    MessageBox.Show(ostridgeArray[i].Name + " has become third!");
+                    winningOstridge = ostridgeArray[i].Name;
+                    ostridgeArray[i].TakeStartingPosition();
+                    i = ostridgeArray.Length;
+                    racebutton.Enabled = true;
+                    ostridgeArray[0].TakeStartingPosition();
+                    ostridgeArray[1].TakeStartingPosition();
+                    ostridgeArray[2].TakeStartingPosition();
+                    ostridgeArray[3].TakeStartingPosition();
+                    ostridgeArray[4].TakeStartingPosition();
+                    pictureBox5.Left = 0;
+                    pictureBox2.Left = 0;
+                    pictureBox3.Left = 0;
+                    pictureBox4.Left = 0;
+                    pictureBox6.Left = 0;
+                }
+
+            }
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+            if (label6.Enabled)
+            {
+                MessageBox.Show("easter egg found!");
+                guyArray[0].Cash = +200;
+                guyArray[1].Cash = +200;
+                guyArray[2].Cash = +200;
+               
+            }
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+                
         }
     }
 }
